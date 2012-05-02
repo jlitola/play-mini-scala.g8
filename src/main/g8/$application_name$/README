@@ -10,3 +10,8 @@ HOW TO USE THIS TEMPLATE
 
 * execute `sbt assembly` to generate a jar distribution 
 
+* execute 'heroku create -s cedar' to create new heroku application using Cedar stack
+
+* execute 'git push heroku master' to push application to Heroku
+
+See Heroku Getting Started guide for more information https://devcenter.heroku.com/articles/quickstart

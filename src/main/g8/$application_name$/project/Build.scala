@@ -2,6 +2,7 @@ import sbt._
 import Keys._
 import sbtassembly.Plugin._
 import AssemblyKeys._
+import com.typesafe.startscript.StartScriptPlugin
 
 object MinimalBuild extends Build {
 
@@ -17,5 +18,5 @@ object MinimalBuild extends Build {
     resolvers += typesafeSnapshot,
     libraryDependencies += "com.typesafe" %% "play-mini" % buildVersion,
     mainClass in (Compile, run) := Some("play.core.server.NettyServer")
-  ).settings(assemblySettings: _*)
+  ).settings(assemblySettings: _*).settings(StartScriptPlugin.startScriptForClassesSettings: _*)
 }
